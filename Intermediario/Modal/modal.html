@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal com Slot</title>
+</head>
+<body>
+    <script src="modal3.js" defer></script>
+    <style>
+        dialog {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 300px;
+            max-width: 90%;
+            background-color: #fff;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        
+        dialog::backdrop {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        
+        slot[name="modal-title"] h1 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        
+        #closeModal {
+            margin-top: 15px;
+        }
+    </style>
+    <custom-modal id="modal">
+        <button>Open</button>
+        <dialog>
+            <div>
+                <slot name="modal-title">
+                    <h1>Título Padrão do Modal</h1>
+                </slot>
+                <button id="closeModal">Ok</button>
+            </div>
+        </dialog>
+    </custom-modal>
+
+    
+    
+
+</body>
+</html>
