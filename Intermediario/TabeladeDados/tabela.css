@@ -1,0 +1,33 @@
+
+
+table {
+width: 100%; 
+border-collapse: collapse; 
+font-family: Arial, sans-serif; 
+font-size: 14px; 
+
+}
+
+
+
+
+tbody td {
+padding: 15px; 
+border-bottom: 1px solid #ddd;
+text-align: center;
+
+}
+
+
+tbody tr:nth-child(even) {
+background-color: #f9f9f9; 
+}
+
+
+tbody tr:hover {
+background-color: #c1dcee; 
+}
+
+
+
+
